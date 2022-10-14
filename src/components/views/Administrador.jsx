@@ -1,9 +1,9 @@
-import { Button, Table } from "react-bootstrap";
+import { Button, Container, Table } from "react-bootstrap";
 import ItemProducto from "./admiProductos/ItemProducto";
 
 const Administrador = () => {
   return (
-    <section className="container">
+    <Container className="container mainSection">
       <div className="d-flex justify-content-between align-items-center mt-5">
         <h1 className="display-4 ">Productos disponibles</h1>
         <Button to="/administrar/crear" className="btn btn-primary">
@@ -27,7 +27,7 @@ const Administrador = () => {
           <ItemProducto></ItemProducto>
         </tbody>
       </Table>
-    </section>
+    </Container>
   );
 };
 
