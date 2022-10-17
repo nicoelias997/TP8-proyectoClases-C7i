@@ -1,39 +1,67 @@
 {
-    "productos": [
-        {
-            "nombreProducto": "cafe", 
-            "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            "precio": 2,
-            "categoria": "bebida-caliente",
-            "id": 1
-        },
-        {
-            "nombreProducto": "brownie", 
-            "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            "precio": 2.5,
-            "categoria": "dulce",
-            "id": 2
-        },
-        {
-            "nombreProducto": "licuado", 
-            "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            "precio": 3,
-            "categoria": "bebida-fria",
-            "id": 3
-        },
-        {
-            "nombreProducto": "bocadillo-jyq", 
-            "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            "precio": 2,
-            "categoria": "salado",
-            "id": 4
-        },
-        {
-            "nombreProducto": "bocadillo-tortilla-papa", 
-            "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            "precio": 2,
-            "categoria": "salado",
-            "id": 5
-        }
-    ]
+  "productos": [
+    {
+      "nombreProducto": "cafe",
+      "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "precio": 2,
+      "categoria": "bebida-caliente",
+      "id": 1
+    },
+    {
+      "nombreProducto": "brownie",
+      "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "precio": 2.5,
+      "categoria": "dulce",
+      "id": 2
+    },
+    {
+      "nombreProducto": "licuado",
+      "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "precio": 3,
+      "categoria": "bebida-fria",
+      "id": 3
+    },
+    {
+      "nombreProducto": "bocadillo-jyq",
+      "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "precio": 2,
+      "categoria": "salado",
+      "id": 4
+    },
+    {
+      "nombreProducto": "bocadillo-tortilla-papa",
+      "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "precio": 2,
+      "categoria": "salado",
+      "id": 5
+    },
+    {
+      "nombreProducto": "cafe express",
+      "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "precio": 2.5,
+      "categoria": "bebida-caliente",
+      "id": 6
+    },
+    {
+      "nombreProducto": "Te",
+      "precio": "2",
+      "imagen": "https://prod-mercadona.imgix.net/images/6e6409e684f3c6c7834554ed3933b9a2.jpg?fit=crop&h=300&w=300",
+      "categoria": "bebida-caliente",
+      "id": 7
+    },
+    {
+      "nombreProducto": "Te de manzanilla",
+      "precio": "3",
+      "imagen": "https://prod-mercadona.imgix.net/images/6e6409e684f3c6c7834554ed3933b9a2.jpg?fit=crop&h=300&w=300",
+      "categoria": "bebida-caliente",
+      "id": 8
+    },
+    {
+      "nombreProducto": "Te con leche",
+      "precio": "1",
+      "imagen": "https://prod-mercadona.imgix.net/images/6e6409e684f3c6c7834554ed3933b9a2.jpg?fit=crop&h=300&w=300",
+      "categoria": "bebida-caliente",
+      "id": 9
+    }
+  ]
 }

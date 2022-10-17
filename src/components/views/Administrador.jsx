@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { Button, Container, Table } from "react-bootstrap";
+import { Container, Table } from "react-bootstrap";
 import { consultarAPI } from "../helpers/queries";
 import ItemProducto from "./admiProductos/ItemProducto";
 
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const Administrador = () => {
   const [productos, setProductos] = useState([]);
@@ -12,6 +13,7 @@ const Administrador = () => {
     consultarAPI().then(
       (respuesta) => {
         setProductos(respuesta);
+        console.log(respuesta)
       },
       (reason) => {
         console.log(reason);
@@ -28,9 +30,9 @@ const Administrador = () => {
     <Container className="container mainSection">
       <div className="d-flex justify-content-between align-items-center mt-5">
         <h1 className="display-4 ">Productos disponibles</h1>
-        <Button to="/administrar/crear" className="btn btn-primary">
+        <Link to="/administrar/crear" className="btn btn-primary">
           Agregar
-        </Button>
+        </Link>
       </div>
       <hr />
       <Table responsive striped bordered hover>
@@ -45,8 +47,11 @@ const Administrador = () => {
           </tr>
         </thead>
         <tbody>
-          {/* aqui tengo que hacer un map */}
-          <ItemProducto></ItemProducto>
+      {
+        productos.map(item => 
+          <ItemProducto key={item.id} id={item.id} imagen={item.imagen} nombreProducto={item.nombreProducto} categoria={item.categoria} precio={item.precio}></ItemProducto>
+        )
+      }
         </tbody>
       </Table>
     </Container>
