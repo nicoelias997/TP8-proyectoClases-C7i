@@ -1,7 +1,29 @@
+import { useEffect, useState } from "react";
 import { Button, Container, Table } from "react-bootstrap";
+import { consultarAPI } from "../helpers/queries";
 import ItemProducto from "./admiProductos/ItemProducto";
 
+import Swal from "sweetalert2";
+
 const Administrador = () => {
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    consultarAPI().then(
+      (respuesta) => {
+        setProductos(respuesta);
+      },
+      (reason) => {
+        console.log(reason);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!',
+        })
+      }
+    );
+  }, []);
+
   return (
     <Container className="container mainSection">
       <div className="d-flex justify-content-between align-items-center mt-5">
