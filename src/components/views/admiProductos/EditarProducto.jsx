@@ -1,19 +1,17 @@
 import { Form, Button } from "react-bootstrap";
-import { obtenerProductoAPI } from "../../helpers/queries";
+import { editarProductoAPI, obtenerProductoAPI } from "../../helpers/queries";
 import {useForm} from "react-hook-form"
 import {useEffect} from "react"
-import {useParams} from "react-router-dom"
+import {useNavigate, useParams} from "react-router-dom"
+import Swal from "sweetalert2";
 
 const EditarProducto = () => {
 
 const {register, handleSubmit, formState:{errors}, setValue} = useForm()
 
 const {id} = useParams()
+const navigate = useNavigate()
 
-
-  const onSubmit = (datos) => {
-      console.log(datos)
-  }
   useEffect(() => {
     obtenerProductoAPI(id).then((respuesta) => {
       if(respuesta.status === 200){
@@ -24,7 +22,20 @@ const {id} = useParams()
         setValue("categoria",  respuesta.dato.categoria)
       }
     })
-  }, [])
+  }, [setValue])
+
+  
+  const onSubmit = (datos) => {
+    console.log(datos)
+    editarProductoAPI(id, datos).then((respuesta) => {
+      if(respuesta.status === 200){
+        Swal.fire("Producto editado", "El producto fue correctamente actualizdo", "success")
+        navigate("/administrar")
+      } else {
+        Swal.fire("Ocurrio un error", "HUbo un problema, intentelo nuevamente en breve.", "error")
+      }
+    })
+}
   
 
   return (
