@@ -39,9 +39,9 @@ const ItemProducto = (props) => {
       <td>{props.imagen}</td>
       <td>{props.categoria}</td>
       <td>
-        <Button variant="warning" as={Link} to="/administrar/editar">
+        <Link className="btn btn-warning" to={`/administrar/editar/${props.id}`}>
           Editar
-        </Button>
+        </Link>
         <Button variant="danger" onClick={borrarProducto}>
           Borrar
         </Button>
