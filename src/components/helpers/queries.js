@@ -44,3 +44,16 @@ export const borrarProductoAPI =  async (id) => {
         console.log(e)
     }
 }
+
+export const obtenerProductoAPI =  async (id) => {
+    try{
+        const respuesta = await fetch(URL+"/"+id)
+        const producto = {
+            dato: await respuesta.json(),
+            status: respuesta.status
+        }
+        return producto
+    } catch(e){
+        console.log(e)
+    }
+}
