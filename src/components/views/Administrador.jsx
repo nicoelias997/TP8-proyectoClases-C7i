@@ -49,7 +49,7 @@ const Administrador = () => {
         <tbody>
       {
         productos.map(item => 
-          <ItemProducto key={item.id} id={item.id} imagen={item.imagen} nombreProducto={item.nombreProducto} categoria={item.categoria} precio={item.precio}></ItemProducto>
+          <ItemProducto key={item.id} id={item.id} imagen={item.imagen} nombreProducto={item.nombreProducto} categoria={item.categoria} precio={item.precio} setProductos={setProductos}></ItemProducto>
         )
       }
         </tbody>
