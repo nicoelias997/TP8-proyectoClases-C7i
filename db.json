@@ -35,5 +35,19 @@
       "categoria": "bebida-caliente",
       "id": 8
     }
+  ],
+  "usuarios": [
+    {
+      "usuario": "nombreUsuario",
+      "email": "emailUsuario",
+      "pass": "passUsuario",
+      "id": "nombreUsuario"
+    },
+    {
+      "usuario": "nicoelias997",
+      "email": "nicoelias997@gmail.com",
+      "pass": "12345678",
+      "id": "nicoelias997"
+    }
   ]
 }
