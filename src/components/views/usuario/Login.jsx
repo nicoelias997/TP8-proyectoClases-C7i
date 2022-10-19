@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import { consultarUserAPI, crearUsuarioAPI } from "../../helpers/queriesLogin";
+import { crearUsuarioAPI } from "../../helpers/queriesLogin";
 
 const Login = () => {
   const navigate = useNavigate();

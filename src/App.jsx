@@ -1,8 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../src/app.css"
 
-import { useState, useEffect } from 'react';
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Inicio from "./components/views/Inicio";
 import Administrador from "./components/views/Administrador";
@@ -17,17 +15,6 @@ import IniciarSesion from './components/views/usuario/IniciarSesion';
 
 
 function App() {
-
-  // let storageUser = JSON.parse(localStorage.getItem("usuarioActivo"));
-  // const [userActive,  setUserActive] = useState(false)
-
-  // useEffect(() => {
-  //   console.log(userActive)
-  //   if((storageUser)){
-  //     setUserActive(true)
-  //   }
-  // })
-
   return (
     // administramos las rutas
     <BrowserRouter>
