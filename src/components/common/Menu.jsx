@@ -19,6 +19,9 @@ const Menu = () => {
           </NavLink>
           </Nav>
         </Navbar.Collapse>
+        <Navbar.Collapse className="justify-content-end">
+          <NavLink to="/login" className="nav-item nav-link">Login</NavLink>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
