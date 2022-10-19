@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../src/app.css"
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, redirect, Navigate } from "react-router-dom";
 import Inicio from "./components/views/Inicio";
 import Administrador from "./components/views/Administrador";
 import Error404 from "./components/views/Error404";
@@ -15,28 +15,39 @@ import IniciarSesion from './components/views/usuario/IniciarSesion';
 
 
 function App() {
+
+  let storageUser = JSON.parse(localStorage.getItem("usuarioActivo"));
+
+  const RutaPrivada = ({element: Component, authenticated}) => { //creamos esta funcion, porque reemplazaremos esta ruta, en todas las rutas que sean privadas!!
+      //otra validacion seria que un user malo  no cree desde informacion desde su pc directamente al local storage
+      if((storageUser)){
+      return authenticated ? <Component></Component> : <Error404></Error404>
+      } 
+  }
+
+
   return (
     // administramos las rutas
     <BrowserRouter>
     <Menu></Menu>
       <Routes>
-        <Route exact path="/" element={<Inicio></Inicio>}></Route>
+        <Route exact path="/" element={<RutaPrivada authenticated={true} element={Inicio}></RutaPrivada>}></Route>
         <Route
           exact
           path="/administrar"
-          element={<Administrador></Administrador>}
+          element={<RutaPrivada authenticated={true} element={Administrador}></RutaPrivada>}
         ></Route>
         <Route
           exact
           path="/administrar/crear"
-          element={<CrearProducto></CrearProducto>}
+          element={<RutaPrivada authenticated={true} element={CrearProducto}></RutaPrivada>}
         ></Route>
         <Route
           exact
           path="/administrar/editar/:id"
-          element={<EditarProducto></EditarProducto>}
+          element={<RutaPrivada authenticated={true} element={EditarProducto}></RutaPrivada>}
         ></Route>
-         <Route exact path="/detalle-producto/:id" element={<DetalleProducto></DetalleProducto>}></Route>
+         <Route exact path="/detalle-producto/:id" element={<RutaPrivada authenticated={true} element={DetalleProducto}></RutaPrivada>}></Route>
 
          <Route exact path="/login" element={<Login></Login>}></Route>
          <Route exact path="/login/iniciarSesion" element={<IniciarSesion></IniciarSesion>}></Route>
