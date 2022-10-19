@@ -15,7 +15,6 @@ const navigate = useNavigate()
   useEffect(() => {
     obtenerProductoAPI(id).then((respuesta) => {
       if(respuesta.status === 200){
-        console.log(respuesta)
         setValue("nombreProducto", respuesta.dato.nombreProducto)
         setValue("precio",  respuesta.dato.precio)
         setValue("imagen",  respuesta.dato.imagen)

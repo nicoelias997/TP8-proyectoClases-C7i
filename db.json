@@ -27,13 +27,6 @@
       "imagen": "https://prod-mercadona.imgix.net/images/b1860bb15ec2f38221beee0fed8296ca.jpg?fit=crop&h=300&w=300",
       "categoria": "bebida-caliente",
       "id": 7
-    },
-    {
-      "nombreProducto": "Cafe batido",
-      "precio": "2",
-      "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "categoria": "bebida-caliente",
-      "id": 8
     }
   ],
   "usuarios": [
@@ -48,6 +41,12 @@
       "email": "nicoelias997@gmail.com",
       "pass": "12345678",
       "id": "nicoelias997"
+    },
+    {
+      "usuario": "nicoelias997",
+      "email": "nicoelias997@gmail.com",
+      "pass": "12345678",
+      "id": "5FYyuU3"
     }
   ]
 }
