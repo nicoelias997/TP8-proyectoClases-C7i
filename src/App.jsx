@@ -34,7 +34,7 @@ function App() {
           path="/administrar/editar/:id"
           element={<EditarProducto></EditarProducto>}
         ></Route>
-         <Route exact path="/detalle-producto" element={<DetalleProducto></DetalleProducto>}></Route>
+         <Route exact path="/detalle-producto/:id" element={<DetalleProducto></DetalleProducto>}></Route>
         <Route path="*" element={<Error404></Error404>}></Route>
       </Routes>
     <Footer></Footer>

@@ -13,7 +13,6 @@ const Administrador = () => {
     consultarAPI().then(
       (respuesta) => {
         setProductos(respuesta);
-        console.log(respuesta)
       },
       (reason) => {
         console.log(reason);
