@@ -1,7 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';  
 import "../src/app.css"
 
-import { BrowserRouter, Routes, Route, redirect, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Inicio from "./components/views/Inicio";
 import Administrador from "./components/views/Administrador";
 import Error404 from "./components/views/Error404";

@@ -35,41 +35,41 @@ const Menu = () => {
 
  
 
-  return (
-    <Navbar bg="danger" variant="dark" expand="lg">
-      <Container>
+    return (
+      <Navbar bg="danger" variant="dark" expand="lg">
+        <Container>
+          {
+            userActive ? (<Navbar.Brand as={Link} to="/">
+            Cafeteria
+          </Navbar.Brand>) : <Navbar.Brand as={Link} to="/login/IniciarSesion">
+            Cafeteria
+          </Navbar.Brand>
+          }
+          
         {
-          userActive ? (<Navbar.Brand as={Link} to="/">
-          Cafeteria
-        </Navbar.Brand>) : <Navbar.Brand as={Link} to="/login/IniciarSesion">
-          Cafeteria
-        </Navbar.Brand>
+          userActive ?  (<>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <NavLink to="/" className="nav-item nav-link">
+                Inicio
+              </NavLink>
+            <NavLink to="/administrar" className="nav-item nav-link">
+              Administrar
+            </NavLink>
+            </Nav>
+          </Navbar.Collapse> </>) : null
         }
         
-       {
-        userActive ?  (<>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <NavLink to="/" className="nav-item nav-link">
-              Inicio
-            </NavLink>
-          <NavLink to="/administrar" className="nav-item nav-link">
-            Administrar
-          </NavLink>
-          </Nav>
-        </Navbar.Collapse> </>) : null
-       }
-       
-        <Navbar.Collapse className="justify-content-end">
-        {
-          userActive ? (<Link  onClick={() => cerrarSesion()} className="nav-item nav-link">Logout</Link>) :
-          <NavLink to="/login" className="nav-item nav-link">Login</NavLink>
-        }
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
-};
+          <Navbar.Collapse className="justify-content-end">
+          {
+            userActive ? (<Link  onClick={() => cerrarSesion()} className="nav-item nav-link">Logout</Link>) :
+            <NavLink to="/login" className="nav-item nav-link">Login</NavLink>
+          }
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    );
+  };
 
-export default Menu;
+  export default Menu;
