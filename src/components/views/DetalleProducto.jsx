@@ -5,16 +5,16 @@ import { obtenerProductoAPI } from '../helpers/queries';
 
 const DetalleProducto = () => {
 
-const {id} = useParams()
+const {_id} = useParams()
 const [producto, setProducto] = useState({})
 
     useEffect(() => {
-        obtenerProductoAPI(id).then((respuesta) => {
+        obtenerProductoAPI(_id).then((respuesta) => {
           if(respuesta.status === 200){
             setProducto(respuesta.dato)
           }
         })
-      }, [id])
+      }, [_id])
 
     return (
         <Card className='container my-5 mainSection'>

@@ -9,11 +9,11 @@ const EditarProducto = () => {
 
 const {register, handleSubmit, formState:{errors}, setValue} = useForm()
 
-const {id} = useParams()
+const {_id} = useParams()
 const navigate = useNavigate()
 
   useEffect(() => {
-    obtenerProductoAPI(id).then((respuesta) => {
+    obtenerProductoAPI(_id).then((respuesta) => {
       if(respuesta.status === 200){
         setValue("nombreProducto", respuesta.dato.nombreProducto)
         setValue("precio",  respuesta.dato.precio)
@@ -21,12 +21,12 @@ const navigate = useNavigate()
         setValue("categoria",  respuesta.dato.categoria)
       }
     })
-  }, [setValue])
+  }, [setValue, _id])
 
   
   const onSubmit = (datos) => {
     console.log(datos)
-    editarProductoAPI(id, datos).then((respuesta) => {
+    editarProductoAPI(_id, datos).then((respuesta) => {
       if(respuesta.status === 200){
         Swal.fire("Producto editado", "El producto fue correctamente actualizdo", "success")
         navigate("/administrar")

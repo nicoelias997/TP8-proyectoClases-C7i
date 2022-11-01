@@ -3,9 +3,9 @@ import { borrarProductoAPI, consultarAPI } from "../../helpers/queries";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 const ItemProducto = (props) => {
-  // const {id, nombreProducto, categoria, imagen, precio} = {...producto}
+  // const {_id, nombreProducto, categoria, imagen, precio} = {...producto}
   const borrarProducto = () => {
-    borrarProductoAPI(props.id).then((respuesta) => {
+    borrarProductoAPI(props._id).then((respuesta) => {
       if(respuesta.status === 200){
         Swal.fire({
           title: 'Estas seguro?',
@@ -32,14 +32,14 @@ const ItemProducto = (props) => {
   }
   return (
     <tr>
-      <td>{props.id}</td>
+      <td>{props._id}</td>
       {/* <td>{props.producto.nombreProducto}</td> */}
       <td>{props.nombreProducto}</td>
       <td>${props.precio}</td>
       <td>{props.imagen}</td>
       <td>{props.categoria}</td>
       <td>
-        <Link className="btn btn-warning" to={`/administrar/editar/${props.id}`}>
+        <Link className="btn btn-warning" to={`/administrar/editar/${props._id}`}>
           Editar
         </Link>
         <Button variant="danger" onClick={borrarProducto}>

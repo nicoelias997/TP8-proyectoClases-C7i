@@ -30,7 +30,7 @@ const Inicio = () => {
       <Row xs={1} md={4} className="g-4">
     {
       productos.map(item => (
-        <CardProducto key={item.id} imagen={item.imagen} nombreProducto={item.nombreProducto} precio={item.precio} id={item.id} ></CardProducto>
+        <CardProducto key={item._id} imagen={item.imagen} nombreProducto={item.nombreProducto} precio={item.precio} _id={item._id} ></CardProducto>
       ))
     }
 

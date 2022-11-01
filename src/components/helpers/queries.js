@@ -34,9 +34,9 @@ export const crearProductoAPI =  async (producto) => {
     }
 }
 
-export const borrarProductoAPI =  async (id) => {
+export const borrarProductoAPI =  async (_id) => {
     try{
-        const respuesta = await fetch(URL+"/"+id,{
+        const respuesta = await fetch(URL+"/"+_id,{
             method: "DELETE"
         })
         return respuesta
@@ -45,9 +45,9 @@ export const borrarProductoAPI =  async (id) => {
     }
 }
 
-export const obtenerProductoAPI =  async (id) => {
+export const obtenerProductoAPI =  async (_id) => {
     try{
-        const respuesta = await fetch(URL+"/"+id)
+        const respuesta = await fetch(URL+"/"+_id)
         const producto = {
             dato: await respuesta.json(),
             status: respuesta.status
@@ -58,9 +58,9 @@ export const obtenerProductoAPI =  async (id) => {
     }
 }
 
-export const editarProductoAPI =  async (id, producto) => {
+export const editarProductoAPI =  async (_id, producto) => {
     try{
-        const respuesta = await fetch(URL+"/"+id,{
+        const respuesta = await fetch(URL+"/"+_id,{
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

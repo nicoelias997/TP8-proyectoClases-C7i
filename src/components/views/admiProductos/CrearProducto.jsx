@@ -9,7 +9,7 @@ const CrearProducto = () => {
 
   const navigate = useNavigate()
 
-  const {register, handleSubmit, formState:{errors}, reset} = useForm()
+  const {register, handleSubmit, formState:{errors}} = useForm()
   //En register, guardamos los "inputs"
   //handleSubmit sera la funcion que guardamos del form que ejcuta la libreria
   //formState: es un objeto donde almacenara los errores que tenga esta libreria y sus validaciones

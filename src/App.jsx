@@ -31,7 +31,7 @@ function App() {
     <BrowserRouter>
     <Menu></Menu>
       <Routes>
-        <Route exact path="/" element={<RutaPrivada authenticated={true} element={Inicio}></RutaPrivada>}></Route>
+        <Route  path="/" element={<RutaPrivada authenticated={true} element={Inicio}></RutaPrivada>}></Route>
         <Route
           exact
           path="/administrar"
@@ -44,10 +44,10 @@ function App() {
         ></Route>
         <Route
           exact
-          path="/administrar/editar/:id"
+          path="/administrar/editar/:_id"
           element={<RutaPrivada authenticated={true} element={EditarProducto}></RutaPrivada>}
         ></Route>
-         <Route exact path="/detalle-producto/:id" element={<RutaPrivada authenticated={true} element={DetalleProducto}></RutaPrivada>}></Route>
+         <Route exact path="/detalle-producto/:_id" element={<RutaPrivada authenticated={true} element={DetalleProducto}></RutaPrivada>}></Route>
 
          <Route exact path="/login" element={<Login></Login>}></Route>
          <Route exact path="/login/iniciarSesion" element={<IniciarSesion></IniciarSesion>}></Route>

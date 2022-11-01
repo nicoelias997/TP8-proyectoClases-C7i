@@ -18,7 +18,7 @@ const CardProducto = (props) => {
         <Card.Text>Precio: ${props.precio}</Card.Text>
       </Card.Body>
       <Card.Footer>
-        <Link className="btn btn-danger me-2" to={`/detalle-producto/${props.id}`}>Ver más</Link>
+        <Link className="btn btn-danger me-2" to={`/detalle-producto/${props._id}`}>Ver más</Link>
       </Card.Footer>
     </Card>
   );
